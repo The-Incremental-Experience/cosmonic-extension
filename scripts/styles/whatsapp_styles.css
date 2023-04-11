@@ -1,4 +1,5 @@
 /*get styles from main page*/
 :root {
-    --mextension-main-color: var(--app-background);
+    --mextension-background-color: var(--app-background);
+    --mextension-text-color: black;
 }

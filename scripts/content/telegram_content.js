@@ -7,3 +7,16 @@ function getElements() {
   if (messageWrapper)
     messageBox = messageWrapper.querySelector("div[id=editable-message-text]");
 }
+
+function getMessageBoxContent() {
+  if (messageWrapper)
+    messageBox = messageWrapper.querySelector("div[id=editable-message-text]");
+  return messageBox ? messageBox.textContent : "";
+}
+
+function writeMessageBoxContent(textInput) {
+  messageBox.textContent = textInput;
+  if (!messageBox.classList.contains("touched")) {
+    messageBox.classList.add("touched");
+  }
+}

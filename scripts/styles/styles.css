@@ -1,14 +1,14 @@
-.mextension-popup-anchor {
-  background-color: var(--mextension-main-color);
-  color: black;
+.mextension-main-button {
+  background-color: var(--mextension-background-color);
+  color: var(--mextension-text-color);
   position: relative;
   display: inline-block;
 }
 
-.mextension-popup {
+.mextension-main-popup {
   width: 100%;
-  background-color: var(--mextension-main-color);
-  color: black;
+  background-color: var(--mextension-background-color);
+  color: var(--mextension-text-color);
   text-align: center;
   border-radius: 8px;
   padding: 8px 0;
@@ -20,6 +20,20 @@
   visibility: visible;
 }
 
+.mextension-popup {
+  background-color: var(--mextension-background-color);
+  color: var(--mextension-text-color);
+  border-radius: 8px;
+  text-align: center;
+  position: absolute;
+  bottom: 125%;
+}
+
+.mextension-input-container {
+  display: list-item;
+  list-style: none;
+}
+
 .mextension-button-container {
   display: flex;
   justify-content: center;
@@ -27,7 +41,13 @@
 
 .mextension-button {
   width: 100%;
-  background-color: var(--mextension-main-color);
+  background-color: var(--mextension-background-color);
   border-radius: 6px;
-  color: black;
+  color: var(--mextension-text-color);
+}
+
+.mextension-arrow-button {
+  width: 25px;
+  height: 25px;
+  background-color: var(--mextension-text-color);
 }

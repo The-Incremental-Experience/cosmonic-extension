@@ -1,0 +1,4 @@
+/*get styles from main page*/
+:root {
+    --mextension-main-color: var(--color-background);
+}

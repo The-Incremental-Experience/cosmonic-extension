@@ -1,0 +1,47 @@
+{
+  "manifest_version": 3,
+  "name": "MeXtension",
+  "description": "Nikita-Level eXtension",
+  "version": "1.0",
+  "icons": {
+    "16": "images/icon-16.png",
+    "32": "images/icon-32.png",
+    "48": "images/icon-48.png",
+    "128": "images/icon-128.png"
+  },
+  "action": {
+    "default_popup": "index.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://web.telegram.org/*"
+      ],
+      "js": [
+        "scripts/content/declarations.js",
+        "scripts/content/telegram_content.js",
+        "scripts/content/main_content.js"
+      ],
+      "css": [
+        "scripts/styles/telegram_styles.css",
+        "scripts/styles/styles.css"
+      ],
+      "run_at": "document_end"
+    },
+    {
+      "matches": [
+        "https://web.whatsapp.com/*"
+      ],
+      "js": [
+        "scripts/content/declarations.js",
+        "scripts/content/whatsapp_content.js",
+        "scripts/content/main_content.js"
+      ],
+      "css": [
+        "scripts/styles/whatsapp_styles.css",
+        "scripts/styles/styles.css"
+      ],
+      "run_at": "document_end"
+    }
+  ]
+}

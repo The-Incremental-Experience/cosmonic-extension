@@ -1,0 +1,33 @@
+.mextension-popup-anchor {
+  background-color: var(--mextension-main-color);
+  color: black;
+  position: relative;
+  display: inline-block;
+}
+
+.mextension-popup {
+  width: 100%;
+  background-color: var(--mextension-main-color);
+  color: black;
+  text-align: center;
+  border-radius: 8px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 0;
+
+  visibility: visible;
+}
+
+.mextension-button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.mextension-button {
+  width: 100%;
+  background-color: var(--mextension-main-color);
+  border-radius: 6px;
+  color: black;
+}

@@ -14,8 +14,8 @@ function addContent() {
       </label>
       <div class="mextension-button-container">
         <button class="mextension-arrow-button" id="mextension-upload-text-button"/>
-        <button class="mextension-button">button1</button>
-        <button class="mextension-button">button2</button>
+        <button class="mextension-button" id="mextension-button1">translate</button>
+        <button class="mextension-button" id="mextension-button2">not working</button>
         <button class="mextension-arrow-button" id="mextension-copy-text-button"/>
       </div>`;
     messageWrapper.appendChild(popupAnchor);
@@ -44,6 +44,13 @@ function addContent() {
           popupAnchor.appendChild(alertPopup);
           setTimeout(() => alertPopup.remove(), 1000);
         });
+      });
+    popup
+      .querySelector("button[id=mextension-button1]")
+      .addEventListener("mousedown", () => {
+        if (input.value) {
+          processMessage(input.value.toString(), {}).then((responseMessage) => input.value = responseMessage);
+        }
       });
   } else {
     setTimeout(() => addContent(), 500);

@@ -20,7 +20,8 @@
       "js": [
         "scripts/content/declarations.js",
         "scripts/content/telegram_content.js",
-        "scripts/content/main_content.js"
+        "scripts/content/main_content.js",
+        "scripts/content/api.js"
       ],
       "css": [
         "scripts/styles/telegram_styles.css",
@@ -35,7 +36,8 @@
       "js": [
         "scripts/content/declarations.js",
         "scripts/content/whatsapp_content.js",
-        "scripts/content/main_content.js"
+        "scripts/content/main_content.js",
+        "scripts/content/api.js"
       ],
       "css": [
         "scripts/styles/whatsapp_styles.css",

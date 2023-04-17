@@ -7,10 +7,15 @@ let mextensionApiConfig = {
 };
 
 async function processMessage(message, options) {
-  try {
-    return await fetch(mextensionUrl, { ...mextensionApiConfig, body: message });
-  } catch (e) {
+  return fetch(mextensionUrl, {
+    ...mextensionApiConfig,
+    body: JSON.stringify({ body: message, user_name: "test user" })
+  }).then((response) => {
+    return response.json();
+  }).then(body => {
+    return JSON.stringify(body);
+  }).catch((e) => {
     console.warn(e);
     return "could not establish a connection";
-  }
+  });
 }

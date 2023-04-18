@@ -24,7 +24,6 @@
         "scripts/content/api.js"
       ],
       "css": [
-        "scripts/styles/telegram_styles.css",
         "scripts/styles/styles.css"
       ],
       "run_at": "document_end"
@@ -40,7 +39,6 @@
         "scripts/content/api.js"
       ],
       "css": [
-        "scripts/styles/whatsapp_styles.css",
         "scripts/styles/styles.css"
       ],
       "run_at": "document_end"

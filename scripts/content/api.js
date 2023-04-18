@@ -1,10 +1,12 @@
 async function processMessage(message, options) {
-  const mextensionUrl = "https://billowing-sea-9553.cosmonic.app/messages";
+  const mextensionUrl = "https://red-glade-2122.cosmonic.app/messages";
   const mextensionApiConfig = {
     method: "POST",
     headers: {
+      "access-control-allow-headers": "*",
       "Content-Type": "application/json",
-      "Access-Control-Allow-Origin": "*"
+      "Access-Control-Allow-Origin": ["*"],
+      "access-control-allow-methods": ["GET", "POST", "PUT"],
     },
     mode: "cors",
   };

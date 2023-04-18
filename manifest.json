@@ -12,6 +12,7 @@
   "action": {
     "default_popup": "index.html"
   },
+  "host_permissions": ["https://red-glade-2122.cosmonic.app/*"],
   "content_scripts": [
     {
       "matches": [

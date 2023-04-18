@@ -1,29 +1,50 @@
+:root {
+  --mextension-background-color: #191919;
+  --mextension-accent-color-1: #2D4263;
+  --mextension-accent-color-2: #C84B31;
+  --mextension-highlight-color-1: #ECDBBA;
+  --mextension-highlight-color-2: black;
+}
+
 .mextension-main-button {
-  background-color: var(--mextension-background-color);
-  color: var(--mextension-text-color);
   position: relative;
   display: inline-block;
+
+  border-radius: 6px;
+  margin: 5px;
+  background-color: var(--mextension-accent-color-1);
+  color: var(--mextension-highlight-color-1);
 }
 
 .mextension-main-popup {
-  width: 100%;
+  width: 95%;
   background-color: var(--mextension-background-color);
-  color: var(--mextension-text-color);
+  color: var(--mextension-highlight-color-1);
   text-align: center;
-  border-radius: 8px;
-  padding: 8px 0;
   position: absolute;
   z-index: 1;
   bottom: 125%;
   left: 0;
+
+  border-style: solid;
+  border-width: 6px;
+  border-radius: 15px;
+  padding: 2px;
+  margin: 15px;
 
   visibility: visible;
 }
 
 .mextension-popup {
   background-color: var(--mextension-background-color);
-  color: var(--mextension-text-color);
-  border-radius: 8px;
+  color: var(--mextension-highlight-color-1);
+
+  border-style: solid;
+  border-width: 6px;
+  border-radius: 15px;
+  padding: 2px;
+  margin: 15px;
+
   text-align: center;
   position: absolute;
   bottom: 125%;
@@ -34,6 +55,44 @@
   list-style: none;
 }
 
+.mextension-input {
+  background-color: var(--mextension-background-color);
+  color: var(--mextension-highlight-color-1);
+  border-color: var(--mextension-highlight-color-1);
+
+  padding: 6px;
+  overflow: auto;
+  width: 90%;
+  height: auto;
+  display: inline-flex;
+  flex-direction: column;
+  border-style: solid;
+  border-width: 6px;
+  border-radius: 15px;
+  margin: 15px;
+  resize: none;
+}
+
+/* width */
+.mextension-input::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.mextension-input::-webkit-scrollbar-track {
+  background: var(--mextension-background-color);
+}
+
+/* Handle */
+.mextension-input::-webkit-scrollbar-thumb {
+  background: var(--mextension-highlight-color-2);
+}
+
+/* Handle on hover */
+.mextension-input::-webkit-scrollbar-thumb:hover {
+  background: var(--mextension-highlight-color-1);
+}
+
 .mextension-button-container {
   display: flex;
   justify-content: center;
@@ -41,13 +100,18 @@
 
 .mextension-button {
   width: 100%;
-  background-color: var(--mextension-background-color);
+  height: 30px;
   border-radius: 6px;
-  color: var(--mextension-text-color);
+  margin: 5px;
+  background-color: var(--mextension-accent-color-1);
+  color: var(--mextension-highlight-color-1);
 }
 
 .mextension-arrow-button {
-  width: 25px;
-  height: 25px;
-  background-color: var(--mextension-text-color);
+  width: 100%;
+  height: 30px;
+  border-radius: 6px;
+  margin: 5px;
+  background-color: var(--mextension-accent-color-2);
+  color: var(--mextension-highlight-color-1);
 }

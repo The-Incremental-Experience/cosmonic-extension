@@ -4,19 +4,19 @@ function addContent() {
     // add anchor and main content
     popupAnchor = document.createElement("button");
     popupAnchor.classList.add("mextension-main-button");
-    popupAnchor.textContent = "mextension-main-button";
+    popupAnchor.textContent = "MeXtension";
     popup = document.createElement("div");
     popup.classList.add("mextension-main-popup");
     popup.innerHTML = `
-      mextension-main-popup
+      MeXtension
       <label class="mextension-input-container">
-        <input id="mextension-input"/>
+        <textarea class="mextension-input" id="mextension-input"></textarea>
       </label>
       <div class="mextension-button-container">
-        <button class="mextension-arrow-button" id="mextension-upload-text-button"/>
+        <button class="mextension-arrow-button" id="mextension-upload-text-button">Up</button>
         <button class="mextension-button" id="mextension-button1">Translate</button>
         <button class="mextension-button" id="mextension-button2">Prettify</button>
-        <button class="mextension-arrow-button" id="mextension-copy-text-button"/>
+        <button class="mextension-arrow-button" id="mextension-copy-text-button">Copy</button>
       </div>`;
     messageWrapper.appendChild(popupAnchor);
     messageWrapper.appendChild(popup);
@@ -25,7 +25,7 @@ function addContent() {
     popupAnchor.addEventListener("mousedown", () => {
       toggleMainPopup();
     });
-    input = messageWrapper.querySelector("input[id=mextension-input]");
+    input = messageWrapper.querySelector("textarea[id=mextension-input]");
     popup
       .querySelector("button[id=mextension-upload-text-button]")
       .addEventListener("mousedown", () => {

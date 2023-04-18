@@ -14,8 +14,8 @@ function addContent() {
       </label>
       <div class="mextension-button-container">
         <button class="mextension-arrow-button" id="mextension-upload-text-button"/>
-        <button class="mextension-button" id="mextension-button1">translate</button>
-        <button class="mextension-button" id="mextension-button2">not working</button>
+        <button class="mextension-button" id="mextension-button1">Translate</button>
+        <button class="mextension-button" id="mextension-button2">Prettify</button>
         <button class="mextension-arrow-button" id="mextension-copy-text-button"/>
       </div>`;
     messageWrapper.appendChild(popupAnchor);
@@ -49,7 +49,14 @@ function addContent() {
       .querySelector("button[id=mextension-button1]")
       .addEventListener("mousedown", () => {
         if (input.value) {
-          processMessage(input.value.toString(), {}).then((responseMessage) => input.value = responseMessage);
+          processMessage(input.value.toString(), {method: "translate"}).then((responseMessage) => input.value = responseMessage);
+        }
+      });
+    popup
+      .querySelector("button[id=mextension-button2]")
+      .addEventListener("mousedown", () => {
+        if (input.value) {
+          processMessage(input.value.toString(), {method: "prettify"}).then((responseMessage) => input.value = responseMessage);
         }
       });
   } else {

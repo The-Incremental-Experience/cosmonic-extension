@@ -3,10 +3,7 @@ async function processMessage(message, options) {
   const mextensionApiConfig = {
     method: "POST",
     headers: {
-      "access-control-allow-headers": "*",
       "Content-Type": "application/json",
-      "Access-Control-Allow-Origin": ["*"],
-      "access-control-allow-methods": ["GET", "POST", "PUT"],
     },
     mode: "cors",
   };
